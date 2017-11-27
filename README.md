@@ -38,8 +38,9 @@ The items in `mac_pools` list variable can contain the following parameters:
 ### Clusters
 To setup clusters you can define list variable called `clusters`.
 The items in `clusters` list variable can contain the following parameters:
-| Name                              | Default value       | Description                             |
-|-----------------------------------|---------------------|-----------------------------------------|
+
+| Name                              | Default value       | Description                              |
+|-----------------------------------|---------------------|------------------------------------------|
 | name                              | UNDEF (Required)    | Name of the cluster.                     |
 | state                             | present             | State of the cluster.                    |
 | cpu_type                          | Intel Conroe Family | CPU type of the cluster.                 |
@@ -81,6 +82,7 @@ Possible `profile` options of cluster are `development` and `production`, their 
 
 ##### Development
 The `development` profile of the cluster have predefined following vaules:
+
 | Parameter        | Value         |
 |------------------|---------------|
 | ballooning       | true          |
@@ -92,6 +94,7 @@ The `development` profile of the cluster have predefined following vaules:
 
 ##### Production
 The `production` profile of the cluster have predefined following vaules:
+
 | Parameter                         | Value              |
 |-----------------------------------|--------------------|
 | ballooning                        | false              |
