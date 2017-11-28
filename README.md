@@ -1,7 +1,7 @@
 oVirt Infra
 ===========
 
-The `ovirt.infra` role enables you to set up oVirt infrastructure including: mac pools, data centers, clusters, networks, hosts, users, and groups.
+The `oVirt.infra` role enables you to set up oVirt infrastructure including: mac pools, data centers, clusters, networks, hosts, users, and groups.
 
 Requirements
 ------------
@@ -376,7 +376,7 @@ Example Playbook
         - always
 
   roles:
-    - ovirt.infra
+    - oVirt.infra
 
   post_tasks:
     - name: Logout from oVirt

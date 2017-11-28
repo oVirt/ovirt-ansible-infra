@@ -1,7 +1,7 @@
 oVirt Clusters
 ==============
 
-The `ovirt.clusters` role is used set up oVirt clusters.
+The `oVirt.clusters` role is used set up oVirt clusters.
 
 Requirements
 ------------
@@ -112,7 +112,7 @@ Example Playbook
        mac_pool: production_mac_pools
 
   roles:
-    - ovirt.infra/roles/ovirt.clusters
+    - oVirt.infra/roles/oVirt.clusters
 ```
 
 License

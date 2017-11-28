@@ -1,7 +1,7 @@
 oVirt External Providers
 ========================
 
-The `ovirt.external-providers` role is used set up oVirt external providers.
+The `oVirt.external-providers` role is used set up oVirt external providers.
 
 Requirements
 ------------
@@ -67,7 +67,7 @@ Example Playbook
        state: absent
 
   roles:
-    - ovirt.external-providers
+    - oVirt.external-providers
 ```
 
 License

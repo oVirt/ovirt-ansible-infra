@@ -1,7 +1,7 @@
 oVirt Storages
 ==============
 
-The `ovirt.storages` role is used to set up oVirt storages.
+The `oVirt.storages` role is used to set up oVirt storages.
 
 Requirements
 ------------
@@ -70,7 +70,7 @@ Example Playbook
           path: /iso
 
   roles:
-    - ovirt.storages
+    - oVirt.storages
 ```
 
 License

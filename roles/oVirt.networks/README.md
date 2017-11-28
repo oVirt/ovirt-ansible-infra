@@ -1,7 +1,7 @@
 oVirt Networks
 ==============
 
-The `ovirt.networks` role sets up oVirt networks.
+The `oVirt.networks` role sets up oVirt networks.
 
 Requirements
 ------------
@@ -83,7 +83,7 @@ Example Playbook
            boot_protocol: dhcp
 
   roles:
-    - ovirt.networks
+    - oVirt.networks
 ```
 
 License

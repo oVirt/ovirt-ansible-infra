@@ -1,7 +1,7 @@
 oVirt Permissions
 =================
 
-The `ovirt.permissions` role is used to set up oVirt permissions.
+The `oVirt.permissions` role is used to set up oVirt permissions.
 
 Requirements
 ------------
@@ -55,7 +55,7 @@ Example Playbook
         object_name: production
 
   roles:
-    - ovirt.permissions
+    - oVirt.permissions
 ```
 
 License

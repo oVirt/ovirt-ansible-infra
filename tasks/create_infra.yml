@@ -1,35 +1,35 @@
 - name: Run mac-pools sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.mac-pools"
+    name: "oVirt.infra/roles/oVirt.mac-pools"
 
 - name: Run datacenters sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.datacenters"
+    name: "oVirt.infra/roles/oVirt.datacenters"
 
 - name: Run clusters sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.clusters"
+    name: "oVirt.infra/roles/oVirt.clusters"
 
 - name: Run hosts sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.hosts"
+    name: "oVirt.infra/roles/oVirt.hosts"
 
 - name: Run networks sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.networks"
+    name: "oVirt.infra/roles/oVirt.networks"
 
 - name: Run storages sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.storages"
+    name: "oVirt.infra/roles/oVirt.storages"
 
 - name: Run aaa-jdbc sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.aaa-jdbc"
+    name: "oVirt.infra/roles/oVirt.aaa-jdbc"
 
 - name: Run external-providers sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.external-providers"
+    name: "oVirt.infra/roles/oVirt.external-providers"
 
 - name: Run permissions sub-role
   import_role:
-    name: "ovirt.infra/roles/ovirt.permissions"
+    name: "oVirt.infra/roles/oVirt.permissions"

@@ -1,7 +1,7 @@
 oVirt Mac Pools
 =================
 
-The `ovirt.mac-pools` role is used to set up oVirt mac pools.
+The `oVirt.mac-pools` role is used to set up oVirt mac pools.
 
 Requirements
 ------------
@@ -46,7 +46,7 @@ Example Playbook
           - 00:1a:4a:16:01:51,00:1a:4a:16:01:61
 
   roles:
-    - ovirt.mac-pools
+    - oVirt.mac-pools
 ```
 
 License

@@ -1,7 +1,7 @@
 oVirt Hosts
 ===========
 
-The `ovirt.hosts` role is used to set up oVirt hosts.
+The `oVirt.hosts` role is used to set up oVirt hosts.
 
 Requirements
 ------------
@@ -47,7 +47,7 @@ Example Playbook
         password: 123456
 
   roles:
-    - ovirt.hosts
+    - oVirt.hosts
 ```
 
 License

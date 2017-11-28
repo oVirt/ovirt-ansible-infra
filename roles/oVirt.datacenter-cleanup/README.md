@@ -1,7 +1,7 @@
 oVirt Datacenter Cleanup
 ========================
 
-The `ovirt.datacenter-cleanup` role is used to cleanup all entities inside
+The `oVirt.datacenter-cleanup` role is used to cleanup all entities inside
 oVirt datacenters and finally remove the datacenters themselves.
 
 Requirements
@@ -37,7 +37,7 @@ Example Playbook
    format_storages: true
 
   roles:
-    - ovirt.infra/roles/ovirt.datacenter-cleanup
+    - oVirt.infra/roles/oVirt.datacenter-cleanup
 ```
 
 License

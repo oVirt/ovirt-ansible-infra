@@ -1,7 +1,7 @@
 oVirt Datacenters
 =================
 
-The `ovirt.datacenters` role is used to set up or cleanup oVirt datacenters.
+The `oVirt.datacenters` role is used to set up or cleanup oVirt datacenters.
 
 Requirements
 ------------
@@ -47,7 +47,7 @@ Example Playbooks
    compatibility_version: 4.1
 
   roles:
-    - ovirt.infra/roles/ovirt.datacenters
+    - oVirt.infra/roles/oVirt.datacenters
 ```
 
 ```yaml
@@ -65,7 +65,7 @@ Example Playbooks
    format_storages: true
 
   roles:
-    - ovirt.infra/roles/ovirt.datacenters
+    - oVirt.infra/roles/oVirt.datacenters
 ```
 
 License
