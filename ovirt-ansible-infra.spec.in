@@ -40,5 +40,8 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Mon Nov 27 2017 Ondra Machacek <omachace@redhat.com> - 1.1.1-1
+- Fix role names to be in sync with Ansible Galaxy.
+
 * Mon Nov 27 2017 Ondra Machacek <omachace@redhat.com> - 1.1.0-1
 - Initial release
