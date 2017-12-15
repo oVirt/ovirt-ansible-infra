@@ -5,9 +5,9 @@
   gather_facts: false
 
   vars_files:
-    - ovirt_infra_vars.yml
+    - vars/ovirt_infra_vars.yml
     # Contains encrypted `engine_password` varibale using ansible-vault
-    - passwords.yml
+    - vars/passwords.yml
 
   pre_tasks:
     - name: Login to oVirt

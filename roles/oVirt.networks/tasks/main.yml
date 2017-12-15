@@ -14,7 +14,7 @@
     description: "{{ item.description | default(omit) }}"
     clusters: "{{ item.clusters | default(omit) }}"
   with_items:
-      - "{{ logical_networks | default([]) }}"
+    - "{{ logical_networks | default([]) }}"
   tags:
     - logical_networks
     - networks

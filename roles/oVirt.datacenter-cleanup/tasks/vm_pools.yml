@@ -1,3 +1,4 @@
+---
 - name: Find existing VMPools
   ovirt_vmpools_facts:
     auth: "{{ ovirt_auth }}"

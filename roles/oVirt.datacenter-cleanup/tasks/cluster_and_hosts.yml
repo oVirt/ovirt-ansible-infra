@@ -1,3 +1,4 @@
+---
 - name: Find existing Hosts
   ovirt_hosts_facts:
     auth: "{{ ovirt_auth }}"

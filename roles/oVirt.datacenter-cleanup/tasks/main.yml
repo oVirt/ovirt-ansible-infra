@@ -1,3 +1,4 @@
+---
 - name: Remove VMPools
   include: vm_pools.yml
 

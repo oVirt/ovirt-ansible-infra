@@ -16,7 +16,7 @@
 
   vars_files:
     # Contains encrypted `engine_password` varibale using ansible-vault
-    - passwords.yml
+    - vars/passwords.yml
 
   pre_tasks:
     - name: Login to oVirt

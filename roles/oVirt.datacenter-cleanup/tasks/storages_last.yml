@@ -1,3 +1,4 @@
+---
 - name: Remove master Storage Domain
   ovirt_storage_domains:
     state: absent

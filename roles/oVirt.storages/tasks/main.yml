@@ -63,8 +63,8 @@
   ovirt_storage_domains_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "type=nfs or type=iscsi or type=posixfs or type=glusterfs or type=fcp"
-    #pattern: "type=nfs or type=posixfs or type=glusterfs"
-    #pattern: "type=iscsi or type=fcp"
+    # pattern: "type=nfs or type=posixfs or type=glusterfs"
+    # pattern: "type=iscsi or type=fcp"
     fetch_nested: true
   tags:
     - storages

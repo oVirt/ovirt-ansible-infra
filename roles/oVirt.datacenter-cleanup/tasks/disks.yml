@@ -1,3 +1,4 @@
+---
 - name: Find existing Disks
   ovirt_disks_facts:
     auth: "{{ ovirt_auth }}"

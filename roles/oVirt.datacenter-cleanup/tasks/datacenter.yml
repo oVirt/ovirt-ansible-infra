@@ -1,3 +1,4 @@
+---
 - name: Remove Datacenter
   ovirt_datacenter:
     state: absent

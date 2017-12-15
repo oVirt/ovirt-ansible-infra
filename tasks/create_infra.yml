@@ -1,3 +1,4 @@
+---
 - name: Run mac-pools sub-role
   import_role:
     name: "oVirt.infra/roles/oVirt.mac-pools"

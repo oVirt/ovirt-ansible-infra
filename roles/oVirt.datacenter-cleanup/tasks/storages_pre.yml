@@ -1,3 +1,4 @@
+---
 - name: Find existing Storage Domains
   ovirt_storage_domains_facts:
     auth: "{{ ovirt_auth }}"

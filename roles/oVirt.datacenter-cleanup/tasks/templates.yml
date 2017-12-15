@@ -1,3 +1,4 @@
+---
 - name: Find existing Templates
   ovirt_templates_facts:
     auth: "{{ ovirt_auth }}"

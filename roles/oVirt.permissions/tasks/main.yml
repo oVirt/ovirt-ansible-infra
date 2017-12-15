@@ -9,7 +9,7 @@
     name: "{{ item.name }}"
     authz_name: "{{ item.authz_name | default(omit) }}"
   with_items:
-      - "{{ users | default([]) }}"
+    - "{{ users | default([]) }}"
   tags:
     - permissions
 
@@ -20,7 +20,7 @@
     name: "{{ item.name }}"
     authz_name: "{{ item.authz_name | default(omit) }}"
   with_items:
-      - "{{ user_groups | default([]) }}"
+    - "{{ user_groups | default([]) }}"
   tags:
     - permissions
 
@@ -35,7 +35,6 @@
     object_name: "{{ item.object_name }}"
     role: "{{ item.role }}"
   with_items:
-      - "{{ permissions | default([]) }}"
+    - "{{ permissions | default([]) }}"
   tags:
     - permissions
-
