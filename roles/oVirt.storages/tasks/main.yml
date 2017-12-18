@@ -89,6 +89,7 @@
   with_subelements:
     - "{{ ovirt_storage_domains | default([]) }}"
     - storage_connections
+    - skip_missing: yes
   when: item.0.name in storages
   tags:
     - storages
