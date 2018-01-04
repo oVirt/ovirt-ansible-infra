@@ -21,7 +21,7 @@
     - datacenters
 
 - name: Recursively remove data center
-  include_role:
+  import_role:
     name: "oVirt.infra/roles/oVirt.datacenter-cleanup"
   when: data_center_state=='absent' and recursive_cleanup
   tags:
