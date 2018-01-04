@@ -34,6 +34,8 @@
     poll_interval: "{{ item.poll_interval | default(20) }}"
   with_items:
     - "{{ hosts | default([]) }}"
+  loop_control:
+    label: "{{ item.name }}"
   async: "{{ ovirt_hosts_max_timeout }}"
   poll: 0
   register: add_hosts
