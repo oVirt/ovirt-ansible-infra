@@ -16,6 +16,8 @@
     password: "{{ item.password | default(omit) }}"
   with_items:
     - "{{ ovirt_hosts | default([]) }}"
+  loop_control:
+    label: "{{ item.name }}"
   tags:
     - hosts
     - reinstall
@@ -47,6 +49,8 @@
   register: job_result
   with_items:
     - "{{ add_hosts.results }}"
+  loop_control:
+    label: "{{ item.item.name }}"
   tags:
     - hosts
   until: job_result.finished
