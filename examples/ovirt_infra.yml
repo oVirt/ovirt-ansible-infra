@@ -9,24 +9,5 @@
     # Contains encrypted `engine_password` varibale using ansible-vault
     - vars/passwords.yml
 
-  pre_tasks:
-    - name: Login to oVirt
-      ovirt_auth:
-        url: "{{ engine_url }}"
-        username: "{{ engine_user }}"
-        password: "{{ engine_password }}"
-        ca_file: "{{ engine_cafile | default(omit) }}"
-        insecure: "{{ engine_insecure | default(true) }}"
-      tags:
-        - always
-
   roles:
     - oVirt.infra
-
-  post_tasks:
-    - name: Logout from oVirt
-      ovirt_auth:
-        state: absent
-        ovirt_auth: "{{ ovirt_auth }}"
-      tags:
-        - always

@@ -1,8 +1,31 @@
 ---
-- name: Create infrastrucutre
-  import_tasks: create_infra.yml
-  when: data_center_state == 'present'
+- block:
+    - name: Login to oVirt
+      # TODO: Remove me when 2.5 is released:
+      ovirt_auth_25:
+        url: "{{ engine_url | default(omit) }}"
+        username: "{{ engine_user | default(omit) }}"
+        password: "{{ engine_password | default(omit) }}"
+        ca_file: "{{ engine_cafile | default(omit) }}"
+        insecure: "{{ engine_insecure | default(true) }}"
+      when: ovirt_auth is undefined
+      register: loggedin
+      tags:
+        - always
 
-- name: Remove infrastrucutre
-  import_tasks: remove_infra.yml
-  when: data_center_state == 'absent'
+    - name: Create infrastrucutre
+      import_tasks: create_infra.yml
+      when: data_center_state == 'present'
+
+    - name: Remove infrastrucutre
+      import_tasks: remove_infra.yml
+      when: data_center_state == 'absent'
+
+  always:
+    - name: Logout from oVirt
+      ovirt_auth:
+        state: absent
+        ovirt_auth: "{{ ovirt_auth }}"
+      when: not loggedin.skipped | default(false)
+      tags:
+        - always
