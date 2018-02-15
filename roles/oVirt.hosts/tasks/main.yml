@@ -35,6 +35,7 @@
     override_iptables: true
     timeout: "{{ item.timeout | default(ovirt_hosts_add_timeout) }}"
     poll_interval: "{{ item.poll_interval | default(20) }}"
+    hosted_engine: "{{ item.hosted_engine | default(omit) }}"
   with_items:
     - "{{ hosts | default([]) }}"
   loop_control:
