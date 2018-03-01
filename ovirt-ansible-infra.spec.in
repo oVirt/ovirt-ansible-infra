@@ -49,6 +49,18 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Thu Mar 1 2018 Ondra Machacek <omachace@redhat.com> - 1.1.4-1
+- Don't fail when hosts var is not passed.
+- Add login support within role.
+
+* Wed Jan 17 2018 Ondra Machacek <omachace@redhat.com> - 1.1.3-1
+- Print only host names while looping hosts.
+- oVirt.datacenters: use import_role instead of include_role.
+- Use skip_missing flag for subelements in oVirt.storages.
+
+* Mon Dec 04 2017 Ondra Machacek <omachace@redhat.com> - 1.1.2-1
+- Add %pretrans scriplet to remove legacy role name.
+
 * Mon Nov 27 2017 Ondra Machacek <omachace@redhat.com> - 1.1.1-1
 - Fix role names to be in sync with Ansible Galaxy.
 
