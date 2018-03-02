@@ -24,6 +24,7 @@ The `hosts` list can contain the following parameters:
 | cluster       | UNDEF (Required) | The cluster that the host must connect to.    |
 | timeout       | 1200             | Maximum wait time for the host to be in an UP state.  |
 | poll_interval | 20               | Polling interval to check the host status. |
+| hosted_engine | UNDEF            | Specifies whether to 'deploy' or 'undeploy' hosted-engine to node. |
 
 Dependencies
 ------------
