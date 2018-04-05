@@ -9,6 +9,7 @@
     compatibility_version: "{{ compatibility_version }}"
     mac_pool: "{{ item.mac_pool | default(omit) }}"
     comment: "{{ item.comment | default(omit) }}"
+    external_network_providers: "{{ item.external_network_providers | default(omit) }}"
     fence_connectivity_threshold: "{{ item.fence_connectivity_threshold | default(omit) }}"
     gluster: "{{ item.gluster | default(omit) }}"
     migration_bandwidth: "{{ item.migration_bandwidth | default(omit) }}"

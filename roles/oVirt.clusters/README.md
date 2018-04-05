@@ -55,6 +55,7 @@ The items in `clusters` list can contain the following parameters:
 | trusted_service     | UNDEF                   | If True enable integration with an OpenAttestation server.|
 | virt                | UNDEF                   | If True, hosts in this cluster will be used to run virtual machines. Default is true. |
 | gluster                      | UNDEF          | If True, hosts in this cluster will be used as Gluster Storage server nodes, and not for running virtual machines. |
+| external_network_providers   | UNDEF          |  List that specify the external network providers available in the cluster. |
 
 More information about the parameters can be found in the [Ansible documentation](http://docs.ansible.com/ansible/ovirt_cluster_module.html).
 
