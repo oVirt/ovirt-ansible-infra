@@ -6,8 +6,8 @@ The `oVirt.infra` role enables you to set up oVirt infrastructure including: mac
 Requirements
 ------------
 
- * oVirt Python SDK version 4
- * Ansible version 2.4
+ * oVirt Python SDK version 4.2
+ * Ansible version 2.5
 
 Role Variables
 --------------

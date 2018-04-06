@@ -44,7 +44,6 @@ install() {
   ln -f -s $PKG_DATA_DIR_ORIG $ROLENAME_LEGACY 
   
   cp -pR defaults/ $PKG_DATA_DIR
-  cp -pR library/ $PKG_DATA_DIR
   cp -pR roles/ $PKG_DATA_DIR
   cp -pR tasks/ $PKG_DATA_DIR
 
