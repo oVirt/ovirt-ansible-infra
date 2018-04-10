@@ -49,6 +49,10 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Tue Apr 10 2018 Ondra Machacek <omachace@redhat.com> - 1.1.5-1
+- Require Ansible 2.5.
+- Add hosted_engine parameter.
+
 * Thu Mar 1 2018 Ondra Machacek <omachace@redhat.com> - 1.1.4-1
 - Don't fail when hosts var is not passed.
 - Add login support within role.
