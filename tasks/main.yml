@@ -1,5 +1,20 @@
 ---
 - block:
+    - name: Check if mandatory parameters are correct
+      fail:
+        msg: "mandatory parameter is undefined '{{item}}' "
+      when: "{{item}} is undefined"
+      with_items:
+        - [data_center_name, compatibility_version ]
+    
+    - name: Check if hosts are correct
+      fail:
+        msg:"'hosts' variable does not contain mandatory parameter '{{ item[1] }}' "
+      when: item[1] not in item[0]
+      with_nested:
+        - "{{ hosts | default([]) }}"
+        - ['name']
+
     - name: Login to oVirt
       ovirt_auth:
         url: "{{ engine_url | default(omit) }}"
