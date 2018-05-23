@@ -9,7 +9,7 @@
     
     - name: Check if hosts are correct
       fail:
-        msg:"'hosts' variable does not contain mandatory parameter '{{ item[1] }}' "
+        msg:"'host' does not contain mandatory parameter '{{ item[1] }}' "
       when: item[1] not in item[0]
       with_nested:
         - "{{ hosts | default([]) }}"
