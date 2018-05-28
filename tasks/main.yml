@@ -2,10 +2,8 @@
 - block:
     - name: Check if mandatory parameters are correct
       fail:
-        msg: "mandatory parameter '{{ item }}' is undefined"
-      when: "{{ item }} is undefined"
-      with_items:
-        - [data_center_name, compatibility_version ]
+        msg: "one of mandatory parameter data_center_name or compatibility_version is undefined"
+      when: "data_center_name is undefined or compatibility_version is undefined"
     
     - name: Check if hosts are correct
       fail:
