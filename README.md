@@ -173,7 +173,7 @@ The value of item in `storages` dictionary can contain following parameters (the
 | posixfs         | UNDEF          | Dictionary defining PosixFS storage. |
 | fcp             | UNDEF          | Dictionary defining FCP storage. |
 | glusterfs       | UNDEF          | Dictionary defining glusterFS storage. |
-| discard_after_delete  | true    | If True storage domain blocks will be discarded upon deletion. Enabled by default. This parameter is relevant only for block based storage domains. |
+| discard_after_delete  | UNDEF    | If True storage domain blocks will be discarded upon deletion. Enabled by default. This parameter is relevant only for block based storage domains. |
 
 More information about the parameters can be found in the [ovirt_storage_domains](http://docs.ansible.com/ansible/ovirt_storage_domains_module.html) module documentation.
 
