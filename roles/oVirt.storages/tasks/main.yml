@@ -76,7 +76,7 @@
 - name: Validate connections of storages
   ovirt_storage_connections:
     auth: "{{ ovirt_auth }}"
-    id: "{{ item.1.id[0] }}"
+    id: "{{ ansible_version.full is version('2.6.0', '>=') | ternary(item.1.id, item.1.id[0]) }}"
     storage: "{{ item.0.name }}"
     address: "{{ storages[item.0.name][item.0.storage.type].address | default(omit) }}"
     path: "{{ storages[item.0.name][item.0.storage.type].path | default(omit) }}"
