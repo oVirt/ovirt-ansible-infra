@@ -49,7 +49,10 @@ sh build.sh install
 %license LICENSE
 
 %changelog
-* Tue Apr 10 2018 Ondra Machacek <omachace@redhat.com> - 1.1.6-1
+* Wed Jul 10 2018 Ondra Machacek <omachace@redhat.com> - 1.1.7-1
+- Don't return ID as list rhbz#1599055.
+
+* Tue Jun 19 2018 Ondra Machacek <omachace@redhat.com> - 1.1.6-1
 - Add support to set external network providers rhbz#1509235.
 
 * Tue Apr 10 2018 Ondra Machacek <omachace@redhat.com> - 1.1.5-1
