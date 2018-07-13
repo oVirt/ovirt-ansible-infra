@@ -20,7 +20,7 @@
         password: "{{ engine_password | default(lookup('env','OVIRT_PASSWORD')) | default(omit) }}"
         ca_file: "{{ engine_cafile | default(lookup('env','OVIRT_CAFILE')) | default(omit) }}"
         insecure: "{{ engine_insecure | default(true) }}"
-      when: ovirt_auth is undefined
+      when: ovirt_auth is undefined or not ovirt_auth
       register: loggedin
       tags:
         - always
