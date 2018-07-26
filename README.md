@@ -302,7 +302,7 @@ Example Playbook
      logical_networks:
        - name: mynetwork
          clusters:
-           - name: development
+           - name: production
              assigned: yes
              required: no
              display: no
