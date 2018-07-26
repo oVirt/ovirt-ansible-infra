@@ -252,7 +252,7 @@ Example Playbook
      data_center_name: mydatacenter
      compatibility_version: 4.1
 
-    mac_pools:
+     mac_pools:
       - mac_pool_name: "Default"
         mac_pool_ranges:
           - "00:1a:4a:16:01:51,00:1a:4a:16:01:61"
