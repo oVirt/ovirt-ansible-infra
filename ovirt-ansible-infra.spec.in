@@ -49,6 +49,11 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Tue Sep 18 2018 Ondra Machacek <omachace@redhat.com> - 1.1.8-1
+- Support using engine_fqdn instead of url.
+- Check for empty ovirt_auth dict.
+- Support AWX credentials. gh#38
+
 * Wed Jul 10 2018 Ondra Machacek <omachace@redhat.com> - 1.1.7-1
 - Don't return ID as list rhbz#1599055.
 
