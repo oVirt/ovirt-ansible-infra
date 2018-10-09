@@ -45,6 +45,7 @@ install() {
   
   cp -pR defaults/ $PKG_DATA_DIR
   cp -pR roles/ $PKG_DATA_DIR
+  cp -pR library/ $PKG_DATA_DIR
   cp -pR tasks/ $PKG_DATA_DIR
 
   echo "Installation done."
