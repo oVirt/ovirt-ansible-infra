@@ -24,7 +24,7 @@
     - reinstall
 
 - name: Add hosts
-  ovirt_hosts:
+  ovirt_hosts_wa_44726:
     auth: "{{ ovirt_auth }}"
     state: "{{ item.state | default(omit) }}"
     name: "{{ item.name }}"
