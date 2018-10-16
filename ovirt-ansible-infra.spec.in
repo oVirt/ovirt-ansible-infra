@@ -49,6 +49,11 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Tue Oct 16 2018 Ondra Machacek <omachace@redhat.com> - 1.1.9-1
+- Workaround to fix async tasks of PR #44726. gh#46
+- Add missing library dir to RPM. gh#45
+- Adding authentication_keys option to os_volume EP. gh#33
+
 * Tue Sep 18 2018 Ondra Machacek <omachace@redhat.com> - 1.1.8-1
 - Support using engine_fqdn instead of url.
 - Check for empty ovirt_auth dict.
