@@ -1,6 +1,6 @@
 ---
 - name: Find existing Disks
-  ovirt_disks_facts:
+  ovirt_disk_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 
