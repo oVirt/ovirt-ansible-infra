@@ -10,4 +10,4 @@
     - vars/passwords.yml
 
   roles:
-    - oVirt.infra
+    - ovirt.infra

@@ -47,7 +47,7 @@ Example Playbooks
    compatibility_version: 4.1
 
   roles:
-    - oVirt.infra/roles/oVirt.datacenters
+    - ovirt.infra/roles/ovirt.datacenters
 ```
 
 ```yaml
@@ -65,7 +65,7 @@ Example Playbooks
    format_storages: true
 
   roles:
-    - oVirt.infra/roles/oVirt.datacenters
+    - ovirt.infra/roles/ovirt.datacenters
 ```
 
 License

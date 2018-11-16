@@ -113,7 +113,7 @@ Example Playbook
        mac_pool: production_mac_pools
 
   roles:
-    - oVirt.infra/roles/oVirt.clusters
+    - ovirt.infra/roles/ovirt.clusters
 ```
 
 License

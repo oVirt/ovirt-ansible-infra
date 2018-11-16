@@ -66,7 +66,7 @@ Example Playbook
         - user1
 
   roles:
-    - oVirt.infra/roles/oVirt.aaa-jdbc
+    - ovirt.infra/roles/oVirt.aaa-jdbc
 ```
 
 License

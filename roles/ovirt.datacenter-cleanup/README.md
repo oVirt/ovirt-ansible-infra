@@ -37,7 +37,7 @@ Example Playbook
    format_storages: true
 
   roles:
-    - oVirt.infra/roles/oVirt.datacenter-cleanup
+    - ovirt.infra/roles/ovirt.datacenter-cleanup
 ```
 
 License
