@@ -59,6 +59,10 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Wed Nov 21 2018 Ondra Machacek <omachace@redhat.com> - 1.1.10-1
+- Require Ansible 2.7.2.
+- Support ovirt.infra name.
+
 * Tue Oct 16 2018 Ondra Machacek <omachace@redhat.com> - 1.1.9-1
 - Workaround to fix async tasks of PR #44726. gh#46
 - Add missing library dir to RPM. gh#45
