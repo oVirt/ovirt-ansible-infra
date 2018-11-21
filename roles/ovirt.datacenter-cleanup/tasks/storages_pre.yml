@@ -1,11 +1,11 @@
 ---
 - name: Find existing Storage Domains
-  ovirt_storage_domains_facts:
+  ovirt_storage_domain_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 
 - name: Remove Storage Domains apart from master
-  ovirt_storage_domains:
+  ovirt_storage_domain:
     state: absent
     id: "{{ ovirt_item.id }}"
     auth: "{{ ovirt_auth }}"
@@ -16,7 +16,7 @@
     loop_var: ovirt_item
 
 - name: Put in maintainance master Storage Domain
-  ovirt_storage_domains:
+  ovirt_storage_domain:
     state: maintenance
     id: "{{ ovirt_item.id }}"
     data_center: "{{ data_center_name }}"

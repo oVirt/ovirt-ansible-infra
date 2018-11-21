@@ -1,6 +1,6 @@
 ---
 - name: Get hosts
-  ovirt_hosts_facts:
+  ovirt_host_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "{{ hosts | map(attribute='name') | map('regex_replace', '(.*)', 'name=\\1') | list | join(' or ') }} status=installfailed"
   when: "hosts is defined"
@@ -9,7 +9,7 @@
     - reinstall
 
 - name: Reinstall hosts
-  ovirt_hosts:
+  ovirt_host:
     auth: "{{ ovirt_auth }}"
     state: reinstalled
     name: "{{ item.name }}"
@@ -24,7 +24,7 @@
     - reinstall
 
 - name: Add hosts
-  ovirt_hosts_wa_44726:
+  ovirt_host:
     auth: "{{ ovirt_auth }}"
     state: "{{ item.state | default(omit) }}"
     name: "{{ item.name }}"

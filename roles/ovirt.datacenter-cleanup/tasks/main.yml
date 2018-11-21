@@ -12,7 +12,7 @@
   include: disks.yml
 
 - name: Find existing Storage Domains in Datacenter
-  ovirt_storage_domains_facts:
+  ovirt_storage_domain_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 
@@ -20,7 +20,7 @@
   include: storages_pre.yml
 
 - name: Find existing clusters in Datacenter
-  ovirt_clusters_facts:
+  ovirt_cluster_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 

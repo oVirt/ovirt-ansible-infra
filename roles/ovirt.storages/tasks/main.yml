@@ -4,7 +4,7 @@
 #################################################
 # First add master storage
 - name: Add master storage
-  ovirt_storage_domains:
+  ovirt_storage_domain:
     auth: "{{ ovirt_auth }}"
     state: "{{ item.value.state | default(omit) }}"
     name: "{{ item.key }}"
@@ -24,7 +24,7 @@
 
 # Next add rest of data storages
 - name: Add storages
-  ovirt_storage_domains:
+  ovirt_storage_domain:
     auth: "{{ ovirt_auth }}"
     state: "{{ item.value.state | default(omit) }}"
     name: "{{ item.key }}"
@@ -44,7 +44,7 @@
 
 # Next add export/iso storages
 - name: Add export/iso storages
-  ovirt_storage_domains:
+  ovirt_storage_domain:
     auth: "{{ ovirt_auth }}"
     state: "{{ item.value.state | default(omit) }}"
     name: "{{ item.key }}"
@@ -63,7 +63,7 @@
     - storages
 
 - name: Fetch storages
-  ovirt_storage_domains_facts:
+  ovirt_storage_domain_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "type=nfs or type=iscsi or type=posixfs or type=glusterfs or type=fcp"
     # pattern: "type=nfs or type=posixfs or type=glusterfs"
@@ -74,7 +74,7 @@
     - storage_connections
 
 - name: Validate connections of storages
-  ovirt_storage_connections:
+  ovirt_storage_connection:
     auth: "{{ ovirt_auth }}"
     id: "{{ ansible_version.full is version('2.6.0', '>=') | ternary(item.1.id, item.1.id[0]) }}"
     storage: "{{ item.0.name }}"

@@ -1,11 +1,11 @@
 ---
 - name: Find existing VMs
-  ovirt_vms_facts:
+  ovirt_vm_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 
 - name: Remove VMs
-  ovirt_vms:
+  ovirt_vm:
     state: absent
     id: "{{ ovirt_item.id }}"
     auth: "{{ ovirt_auth }}"

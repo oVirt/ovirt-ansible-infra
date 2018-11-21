@@ -1,11 +1,11 @@
 ---
 - name: Find existing Templates
-  ovirt_templates_facts:
+  ovirt_template_facts:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 
 - name: Remove Templates
-  ovirt_templates:
+  ovirt_template:
     state: absent
     auth: "{{ ovirt_auth }}"
     id: "{{ ovirt_item.id }}"

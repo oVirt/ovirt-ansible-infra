@@ -5,7 +5,7 @@
     pattern: "datacenter={{ data_center_name }}"
 
 - name: Remove Disks
-  ovirt_disks:
+  ovirt_disk:
     state: absent
     id: "{{ ovirt_item.id }}"
     auth: "{{ ovirt_auth }}"
