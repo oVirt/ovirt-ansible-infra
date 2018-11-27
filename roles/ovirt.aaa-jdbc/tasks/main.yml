@@ -3,6 +3,7 @@
 ## User & groups internal
 ################################
 - name: Manage internal users
+  no_log: true
   command: "{{ aaa_jdbc_prefix }}/ovirt-aaa-jdbc-tool user {{ (item.state is undefined or item.state == 'present') | ternary('add','delete') }} {{ item.name }}"
   with_items:
     - "{{ users | default([]) }}"
