@@ -3,6 +3,11 @@ oVirt Infra
 
 The `ovirt.infra` role enables you to set up oVirt infrastructure including: mac pools, data centers, clusters, networks, hosts, users, and groups.
 
+Target machine
+--------------
+In case you use this role to do user management, it will use `ovirt-aaa-jdbc-tool`, which is located on engine machine,
+so you must execute the role on engine machine.
+
 Note
 ----
 Please note that when installing this role from Ansible Galaxy you are instructed to run following command:

@@ -26,6 +26,7 @@
 - name: Run aaa-jdbc sub-role
   import_role:
     name: "ovirt.infra/roles/ovirt.aaa-jdbc"
+  when: users is defined or user_groups is defined
 
 - name: Run external-providers sub-role
   import_role:

@@ -2,6 +2,22 @@
 ################################
 ## User & groups internal
 ################################
+- name: Check if ovirt-aaa-jdbc-tool exists
+  stat:
+    path: "{{ aaa_jdbc_prefix }}/ovirt-aaa-jdbc-tool"
+  register: aaa_jdbc_path_stat
+  tags:
+    - ovirt-aaa-jdbc
+    - users
+
+- name: Fail the role if aaa-jdbc-tool don't exist
+  fail:
+    msg: "{{ aaa_jdbc_prefix }}/ovirt-aaa-jdbc-tool doesn't exist, are you on engine machine?"
+  when: not aaa_jdbc_path_stat.stat.exists
+  tags:
+    - ovirt-aaa-jdbc
+    - users
+
 - name: Manage internal users
   no_log: true
   command: "{{ aaa_jdbc_prefix }}/ovirt-aaa-jdbc-tool user {{ (item.state is undefined or item.state == 'present') | ternary('add','delete') }} {{ item.name }}"
