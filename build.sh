@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.1.10"
+VERSION="1.1.11"
 MILESTONE=
 RPM_RELEASE="1"
 

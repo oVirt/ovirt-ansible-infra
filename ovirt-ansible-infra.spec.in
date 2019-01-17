@@ -59,6 +59,10 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Wed Jan 16 2019 Ondra Machacek <omachace@redhat.com> - 1.1.11-1
+- Document usage of users rhbz#1638380.
+- Add no_log to manage users task.
+
 * Wed Nov 21 2018 Ondra Machacek <omachace@redhat.com> - 1.1.10-1
 - Require Ansible 2.7.2.
 - Support ovirt.infra name.
