@@ -51,6 +51,7 @@ install() {
   cp -pR roles/ $PKG_DATA_DIR
   cp -pR library/ $PKG_DATA_DIR
   cp -pR tasks/ $PKG_DATA_DIR
+  cp -pR filter_plugins/ $PKG_DATA_DIR
 
   echo "Installation done."
 }
