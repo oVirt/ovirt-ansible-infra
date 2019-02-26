@@ -269,7 +269,7 @@ Example Playbook
   gather_facts: false
 
   vars:
-     engine_url: https://ovirt-engine.example.com/ovirt-engine/api
+     engine_fqdn: ovirt-engine.example.com
      engine_user: admin@internal
      engine_password: 123456
      engine_cafile: /etc/pki/ovirt-engine/ca.pem
@@ -392,7 +392,7 @@ Example Playbook
   pre_tasks:
     - name: Login to oVirt
       ovirt_auth:
-        url: "{{ engine_url }}"
+        hostname: "{{ engine_fqdn }}"
         username: "{{ engine_user }}"
         password: "{{ engine_password }}"
         ca_file: "{{ engine_cafile | default(omit) }}"
