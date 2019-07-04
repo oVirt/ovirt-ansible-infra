@@ -141,13 +141,27 @@ The items in `hosts` list variable can contain the following parameters:
 |---------------|------------------|---------------------------------------|
 | name          | UNDEF (Required) | Name of the host.                      |
 | state         | present          | Specifies whether the host is `present` or `absent`.  |
-| address       | UNDEF (Required) | IP address or FQDN of the host.   |
+| address       | UNDEF            | IP address or FQDN of the host.   |
 | password      | UNDEF            | The host's root password. Required if <i>public_key</i> is false. |
 | public_key    | UNDEF            | If <i>true</i> the public key should be used to authenticate to host. |
 | cluster       | UNDEF (Required) | The cluster that the host must connect to.    |
 | timeout       | 1800             | Maximum wait time for the host to be in an UP state.  |
 | poll_interval | 20               | Polling interval to check the host status. |
 | hosted_engine | UNDEF            | Specifies if the host is 'deploy' as hosted engine. |
+| power_management | UNDEF            | The power managment. You can choose a predefined variables, see the tables below. |
+
+##### Host power managment
+The `power_management` have predefined following vaules:
+
+| Name          | Default value    | Description                           |
+|---------------|------------------|---------------------------------------|
+| address       | UNDEF            | Address of the power management interface. |
+| state         | present          | Should the host power managment be present/absent.  |
+| username      | UNDEF            | Username to be used to connect to power management interface.      |
+| password      | UNDEF            | Password of the user specified in C(username) parameter. |
+| type          | UNDEF            | Type of the power management. oVirt/RHV predefined values are drac5, ipmilan, rsa, bladecenter, alom, apc, apc_snmp, eps, wti, rsb, cisco_ucs, drac7, hpblade, ilo, ilo2, ilo3, ilo4, ilo_ssh, but user can have defined custom type. |
+| options       | UNDEF            | Dictionary of additional fence agent options (including Power Management slot). Additional information about options can be found at https://github.com/ClusterLabs/fence-agents/blob/master/doc/FenceAgentAPI.md. |
+| port          | UNDEF            | Power management interface port. |
 
 ### Networks
 
@@ -296,6 +310,15 @@ Example Playbook
         address: 5.6.7.8
         cluster: production
         password: 123456
+        power_management:
+          address: 9.8.7.6
+          username: root
+          password: password
+          type: ipmilan
+          options:
+            myoption1: x
+            myoption2: y
+            slot: myslot
 
      storages:
        mynfsstorage:
