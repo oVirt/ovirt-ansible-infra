@@ -1,6 +1,6 @@
 ---
 - name: Add external providers
-  ovirt_external_provider_26:
+  ovirt_external_provider:
     auth: "{{ ovirt_auth }}"
     name: "{{ item.name }}"
     state: "{{ item.state | default('present') }}"
