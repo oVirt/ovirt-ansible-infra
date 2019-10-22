@@ -1,5 +1,4 @@
 distros:
-  - fc29
   - fc30
   - el7
 release_branches:

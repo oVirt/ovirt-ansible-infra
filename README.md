@@ -30,7 +30,7 @@ Requirements
 ------------
 
  * oVirt Python SDK version 4.2
- * Ansible version 2.5
+ * Ansible version 2.9
 
 Role Variables
 --------------
