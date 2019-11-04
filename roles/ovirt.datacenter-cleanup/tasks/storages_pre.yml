@@ -1,6 +1,6 @@
 ---
 - name: Find existing Storage Domains
-  ovirt_storage_domain_facts:
+  ovirt_storage_domain_info:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 

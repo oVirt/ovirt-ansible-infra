@@ -1,6 +1,6 @@
 ---
 - name: Find existing VMs
-  ovirt_vm_facts:
+  ovirt_vm_info:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 

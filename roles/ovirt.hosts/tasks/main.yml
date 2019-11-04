@@ -1,6 +1,6 @@
 ---
 - name: Get hosts
-  ovirt_host_facts:
+  ovirt_host_info:
     auth: "{{ ovirt_auth }}"
     pattern: "{{ hosts | map(attribute='name') | map('regex_replace', '(.*)', 'name=\\1') | list | join(' or ') }} status=installfailed"
   when: "hosts is defined"

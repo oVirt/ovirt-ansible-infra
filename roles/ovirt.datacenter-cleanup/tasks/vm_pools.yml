@@ -1,6 +1,6 @@
 ---
 - name: Find existing VMPools
-  ovirt_vmpool_facts:
+  ovirt_vmpool_info:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
 

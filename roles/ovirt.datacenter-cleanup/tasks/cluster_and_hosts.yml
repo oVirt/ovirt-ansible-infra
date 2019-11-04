@@ -1,6 +1,6 @@
 ---
 - name: Find existing Hosts
-  ovirt_host_facts:
+  ovirt_host_info:
     auth: "{{ ovirt_auth }}"
     pattern: "cluster={{ cluster_item.name }}"
 

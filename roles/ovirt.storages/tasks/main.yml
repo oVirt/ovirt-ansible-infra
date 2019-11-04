@@ -63,7 +63,7 @@
     - storages
 
 - name: Fetch storages
-  ovirt_storage_domain_facts:
+  ovirt_storage_domain_info:
     auth: "{{ ovirt_auth }}"
     pattern: "type=nfs or type=iscsi or type=posixfs or type=glusterfs or type=fcp"
     # pattern: "type=nfs or type=posixfs or type=glusterfs"
