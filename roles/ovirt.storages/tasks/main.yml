@@ -69,6 +69,7 @@
     # pattern: "type=nfs or type=posixfs or type=glusterfs"
     # pattern: "type=iscsi or type=fcp"
     fetch_nested: true
+  register: sd_info
   tags:
     - storages
     - storage_connections
@@ -90,10 +91,10 @@
     target: "{{ storages[item.0.name][item.0.storage.type].target | default(omit) }}"
     force: true
   with_subelements:
-    - "{{ ovirt_storage_domains | default([]) }}"
+    - "{{ sd_info.ovirt_storage_domains | default([]) }}"
     - storage_connections
     - skip_missing: yes
-  when: item.0.name in storages
+  when: storages is defined and item.0.name in storages
   tags:
     - storages
     - storage_connections

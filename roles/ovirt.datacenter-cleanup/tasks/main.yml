@@ -15,6 +15,7 @@
   ovirt_storage_domain_info:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
+  register: sd_info
 
 - name: Remove all Storage Domains except master
   include: storages_pre.yml
@@ -23,6 +24,7 @@
   ovirt_cluster_info:
     auth: "{{ ovirt_auth }}"
     pattern: "datacenter={{ data_center_name }}"
+  register: cluster_info
 
 - name: Remove Datacenter
   include: datacenter.yml
@@ -32,6 +34,6 @@
 
 - name: Remove Clusters and Hosts
   include: cluster_and_hosts.yml
-  with_items: "{{ ovirt_clusters }}"
+  with_items: "{{ cluster_info.ovirt_clusters }}"
   loop_control:
     loop_var: cluster_item
