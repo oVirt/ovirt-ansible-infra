@@ -59,6 +59,9 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Tue Nov 5 2019 Martin Necas <mnecas@redhat.com> - 1.1.13-1
+- Add host power management.
+
 * Tue Mar 12 2019 Ondra Machacek <omachace@redhat.com> - 1.1.12-1
 - Wait for hosts to be added - add no_log.
 
