@@ -29,8 +29,8 @@ So you can use any of this name. This documentation and examples in this reposit
 Requirements
 ------------
 
- * oVirt Python SDK version 4.2
- * Ansible version 2.5
+ * oVirt Python SDK version 4.3
+ * Ansible version 2.9
 
 Role Variables
 --------------
