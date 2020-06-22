@@ -99,7 +99,7 @@ The items in `clusters` list variable can contain the following parameters:
 | gluster                      | UNDEF          | If True, hosts in this cluster will be used as Gluster Storage server nodes, and not for running virtual machines. |
 | external_network_providers   | UNDEF          |  List that specify the external network providers available in the cluster. |
 
-More information about the parameters can be found in the [ovirt_clusters](http://docs.ansible.com/ansible/ovirt_cluster_module.html) module documentation.
+More information about the parameters can be found in the [ovirt_cluster](http://docs.ansible.com/ansible/ovirt_cluster_module.html) module documentation.
 
 #### Cluster Profile
 Possible `profile` options of cluster are `development` and `production`, their default values are described below:
@@ -179,7 +179,7 @@ The `logical_networks` list can contain following parameters:
 | description   | 1200           | Maximum wait time for host to be in an UP state.  |
 | clusters      | 20             | Polling interval to check the host status. |
 
-More information about the parameters can be found in the [ovirt_networks](http://docs.ansible.com/ansible/ovirt_networks_module.html) module documentation.
+More information about the parameters can be found in the [ovirt_network](http://docs.ansible.com/ansible/ovirt_network_module.html) module documentation.
 
 ##### Host networks
 To setup host networks you can define list variable called `host_networks`.
@@ -196,7 +196,7 @@ The `host_networks` list can contain following parameters:
 | labels        | UNDEF          | List of names of the network label to be assigned to the bond or interface. |
 | interface     | UNDEF          | Name of the network interface where the logical network should be attached. |
 
-More information about the parameters can be found in the [ovirt_host_networks](http://docs.ansible.com/ansible/ovirt_host_networks_module.html) module documentation.
+More information about the parameters can be found in the [ovirt_host_network](http://docs.ansible.com/ansible/ovirt_host_network_module.html) module documentation.
 
 ### Storages
 To setup storages you can define dictionary variable called `storages`.
@@ -214,7 +214,7 @@ The value of item in `storages` dictionary can contain following parameters (the
 | glusterfs       | UNDEF          | Dictionary defining glusterFS storage. |
 | discard_after_delete  | UNDEF    | If True storage domain blocks will be discarded upon deletion. Enabled by default. This parameter is relevant only for block based storage domains. |
 
-More information about the parameters can be found in the [ovirt_storage_domains](http://docs.ansible.com/ansible/ovirt_storage_domains_module.html) module documentation.
+More information about the parameters can be found in the [ovirt_storage_domain](http://docs.ansible.com/ansible/ovirt_storage_domain_module.html) module documentation.
 
 ### AAA JDBC
 ##### Users
