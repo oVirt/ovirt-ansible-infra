@@ -18,6 +18,7 @@ The value of item in `storages` dictionary can contain following parameters (the
 |-----------------|----------------|---------------------------------------|
 | master          | false          | If true, the storage will be added as the first storage, meaning it will be the master storage. |
 | domain_function | data           | The function of the storage domain. Possible values are: <ul><li>iso</li><li>export</li><li>data</li></ul>. |
+| localfs         | UNDEF          | Dictionary defining local storage. |
 | nfs             | UNDEF          | Dictionary defining NFS storage. |
 | iscsi           | UNDEF          | Dictionary defining iSCSI storage. |
 | posixfs         | UNDEF          | Dictionary defining PosixFS storage. |
