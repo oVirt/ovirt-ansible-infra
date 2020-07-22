@@ -2,9 +2,9 @@
 - name: Get hosts
   ovirt_host_info:
     auth: "{{ ovirt_auth }}"
-    pattern: "{{ hosts | map(attribute='name') | map('regex_replace', '(.*)', 'name=\\1') | list | join(' or ') }} status=installfailed"
+    pattern: "{{ ovirt_infra_hosts | map(attribute='name') | map('regex_replace', '(.*)', 'name=\\1') | list | join(' or ') }} status=installfailed"
   register: host_info
-  when: "hosts is defined"
+  when: ovirt_infra_hosts | length > 0
   tags:
     - hosts
     - reinstall
@@ -37,8 +37,7 @@
     timeout: "{{ item.timeout | default(ovirt_hosts_add_timeout) }}"
     poll_interval: "{{ item.poll_interval | default(20) }}"
     hosted_engine: "{{ item.hosted_engine | default(omit) }}"
-  with_items:
-    - "{{ hosts | default([]) }}"
+  with_items: "{{ ovirt_infra_hosts }}"
   loop_control:
     label: "{{ item.name }}"
   async: "{{ ovirt_hosts_max_timeout }}"
@@ -72,8 +71,7 @@
     port: "{{ item.power_management.port | default(omit) }}"
     name: "{{ item.name }}"
   when: item.power_management is defined and not (item.state is defined and item.state == 'absent')
-  with_items:
-    - "{{ hosts | default([]) }}"
+  with_items: "{{ ovirt_infra_hosts }}"
   loop_control:
     label: "{{ item.name }}"
   tags:

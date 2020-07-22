@@ -150,6 +150,24 @@ The items in `hosts` list variable can contain the following parameters:
 | hosted_engine | UNDEF            | Specifies if the host is 'deploy' as hosted engine. |
 | power_management | UNDEF            | The power managment. You can choose a predefined variables, see the tables below. |
 
+In case you cannot use `hosts` variable for whatever reason in your playbook, you can change this variable's name
+by overriding value of `hosts_var_name` variable. Example:
+```yaml
+- name: Set up oVirt infrastructure
+  hosts: engine
+
+  roles:
+    - role: ovirt.infra
+      vars:
+        hosts_var_name: ovirt_hosts
+        ovirt_hosts:
+          - name: host_0
+            state: present
+            address: 1.2.3.4
+            password: 123456
+            cluster: Default
+```
+
 ##### Host power managment
 The `power_management` have predefined following vaules:
 
