@@ -55,9 +55,17 @@
     label: "{{ item.item.name }}"
   tags:
     - hosts
+  ignore_errors: yes
   until: job_result.finished
   retries: "{{ ovirt_hosts_max_timeout // 20 }}"
   delay: 20
+
+- name: Fail the play with unexpected error
+  fail:
+    msg: The host deploy failed with message '{{ item["exception"] }}'.
+  when: item.failed and "the following networks are missing" not in item["exception"]
+  with_items:
+    - "{{ job_result.results }}"
 
 - name: Set Power Management
   ovirt_host_pm:
