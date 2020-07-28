@@ -20,13 +20,14 @@ The `logical_networks` list can contain following parameters:
 |---------------|----------------|---------------------------------------|
 | name          | UNDEF          | Name of the network.                   |
 | state         | present        | Specifies whether the network state is `present` or `absent`. |
-| vlan_tag      | UNDEF          | IP address or FQDN of the host.                |
-| vm_network    | UNDEF          | Root password of the host.             |
-| mtu           | UNDEF          | Cluster which host should connect to.     |
-| description   | 1200           | Maximum wait time for host to be in an UP state.  |
-| clusters      | 20             | Polling interval to check the host status. |
+| vlan_tag      | UNDEF          | Specify VLAN tag.                |
+| vm_network    | True           | If True network will be marked as network for VM.             |
+| mtu           | UNDEF          | Maximum transmission unit (MTU) of the network.    |
+| description   | UNDEF          | Description of the network.  |
+| clusters      | UNDEF          | List of dictionaries describing how the network is managed in specific cluster. |
+| label         | UNDEF          | Name of the label to assign to the network. |
 
-More information about logical networks can be found [here](http://docs.ansible.com/ansible/ovirt_networks_module.html).
+More information about the parameters can be found in the [ovirt_network](http://docs.ansible.com/ansible/ovirt_network_module.html) module documentation.
 
 The `host_networks` list can contain following parameters:
 
@@ -41,7 +42,7 @@ The `host_networks` list can contain following parameters:
 | labels        | UNDEF          | List of names of the network label to be assigned to the bond or interface. |
 | interface     | UNDEF          | Name of the network interface where the logical network should be attached. |
 
-More information about host networks can be found [here](http://docs.ansible.com/ansible/ovirt_host_networks_module.html).
+More information about the parameters can be found in the [ovirt_host_network](http://docs.ansible.com/ansible/ovirt_host_network_module.html) module documentation.
 
 Dependencies
 ------------

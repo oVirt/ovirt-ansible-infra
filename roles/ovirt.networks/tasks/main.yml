@@ -13,6 +13,7 @@
     mtu: "{{ item.mtu | default(omit) }}"
     description: "{{ item.description | default(omit) }}"
     clusters: "{{ item.clusters | default(omit) }}"
+    label: "{{ item.label | default(omit) }}"
   with_items:
     - "{{ logical_networks | default([]) }}"
   tags:
