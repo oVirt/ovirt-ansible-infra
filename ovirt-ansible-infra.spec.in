@@ -59,6 +59,11 @@ sh build.sh install
 %license LICENSE
 
 %changelog
+* Thu Jul 30 2020 Martin Necas <mnecas@redhat.com> - 1.2.2-1
+- Add localfs as storage type
+- Add label option to logical networks
+- Make hosts variable name dynamic
+
 * Mon Dec 2 2019 Martin Necas <mnecas@redhat.com> - 1.2.1-1
 - Add build for el8.
 
