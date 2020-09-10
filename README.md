@@ -1,6 +1,8 @@
 oVirt Infra
 ===========
 
+## This role has been migrated to [oVirt Ansible Collection](https://github.com/ovirt/ovirt-ansible-collection), please use latest version from there. This repository is now readonly and no longer used for active development
+
 The `ovirt.infra` role enables you to set up oVirt infrastructure including: mac pools, data centers, clusters, networks, hosts, users, and groups.
 
 Target machine
